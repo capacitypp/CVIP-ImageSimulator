@@ -35,7 +35,10 @@ public class GlCapture {
 			}
 		}
 		try {
-			ImageIO.write(bImage, "jpg", new File("C:\\Users\\佐野 和輝\\Desktop\\output.jpg"));
+			//デスクトップに保存
+			String desktopPath = new File(System.getProperty("user.home"), "Desktop").getAbsolutePath();
+			ImageIO.write(bImage, "jpg", new File(desktopPath, "output.jpg"));
+
 		} catch (IOException e) {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
